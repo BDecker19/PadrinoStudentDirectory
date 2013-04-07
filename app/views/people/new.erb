@@ -1,0 +1,45 @@
+<h3>New <%= @person.class %></h3>
+
+<%= flash_tag :notice %>
+
+<% form_tag url_for(:people, :create) do %>
+  <%= hidden_field_tag :type, :value => @person.class %>
+
+  <p>
+	  <%= label_tag :name %>
+	  <%= text_field_tag :name %>
+  </p>
+
+  <p>
+	  <%= label_tag :email %>
+	  <%= text_field_tag :email %>
+  </p>
+
+  <p>
+	  <%= label_tag :github %>
+	  <%= text_field_tag :github %>
+  </p>
+
+   <p>
+	  <%= label_tag :twitter %>
+	  <%= text_field_tag :twitter %>
+  </p>
+
+  <% if @person.is_a? Student %>
+ 
+   <p>
+	  <%= label_tag :reason_for_joining %>
+	  <%= text_field_tag :reason_for_joining %>
+  </p>
+
+  <% else %>
+
+   <p>
+	  <%= label_tag :iq %>
+	  <%= text_field_tag :iq %>
+  </p>
+
+  <% end %>
+
+  <%= submit_tag %>
+<% end %>

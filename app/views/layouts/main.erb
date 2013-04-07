@@ -1,0 +1,23 @@
+<h1>Student Directory</h1>
+
+<ul>
+  <li>
+    <%= link_to 'All Students', url_for(:student, :index) %>
+  </li>
+
+  <li>
+    <%= link_to 'New Student', url_for(:student, :new) %>
+  </li>
+
+  <li>
+    <%= link_to 'All Instructors', url_for(:student, :index) %>
+  </li>
+
+  <li>
+    <%= link_to 'New Instructor', url_for(:student, :new) %>
+  </li>
+</ul>
+
+<div id="content">
+  <%= yield %>
+</div>

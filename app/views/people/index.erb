@@ -1,0 +1,7 @@
+<h3>Everybody</h3>
+
+<ul>
+  <% @people.each do |p| %>
+    <li><%= p.type %>: <%= p.name %></li>
+  <% end %>
+</ul>
